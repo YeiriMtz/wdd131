@@ -1,0 +1,52 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: indigo;
+  color: white;
+  padding: 1rem;
+}
+
+footer{
+  display: grid; 
+  text-align: center;
+  background-color: indigo;
+  color: white;
+  padding: 1rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+img {
+    height: 300px;
+}
+
+.album {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: repeat(3, auto); 
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1250px; 
+  margin: 0 auto;
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
