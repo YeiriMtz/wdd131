@@ -1,0 +1,48 @@
+.album {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.album img {
+  height: 300px;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: indigo;
+  color: white;
+  padding: 1rem;
+}
+
+footer{
+  display: grid; 
+  text-align: center;
+  background-color: indigo;
+  color: white;
+  padding: 1rem;
+}
+
+header p {
+  font-size: 2rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.navigation {
+  display: flex !important;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 0;
+}
