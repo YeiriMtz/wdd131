@@ -6,7 +6,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: indigo;
+  background-color: rgb(24, 81, 128);
   color: white;
   padding: 1rem;
 }
@@ -14,7 +14,7 @@ header{
 footer{
   display: grid; 
   text-align: center;
-  background-color: indigo;
+  background-color: rgb(24, 81, 128);
   color: white;
   padding: 1rem;
 }
@@ -32,7 +32,7 @@ nav a {
 }
 
 nav a:hover {
-  text-decoration: underline;
+  text-shadow: 0 0 15px rgb(179, 255, 0), 0 0 20px rgb(238, 255, 0);
 }
 
 h1, figcaption {
@@ -47,7 +47,7 @@ img {
 nav .menu-items {
   display: none;
   flex-direction: column;
-  background-color: indigo;
+  background-color: rgb(24, 81, 128);
   margin-top: 0.5rem;
   border-radius: 4px;
 }
