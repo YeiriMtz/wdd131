@@ -1,48 +1,36 @@
-.album {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1rem;
+@media (min-width: 901px) {
+  /* Show menu items inline and hide toggle button */
+  nav #menuToggle {
+    display: none;
+  }
+
+  nav .menu-items {
+    display: flex !important; /* force display on large screens */
+    flex-direction: row;
+    background: none;
+    margin-top: 0;
+    border-radius: 0;
+  }
+
+  nav .menu-items a {
+    padding: 0;
+    margin-left: 1rem;
+    border: none;
+  }
+
+  /* Album grid: 3 columns on large screens */
+  .album {
+    max-width: 1250px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
 }
 
-.album img {
-  height: 300px;
-}
-
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: indigo;
-  color: white;
-  padding: 1rem;
-}
-
-footer{
-  display: grid; 
-  text-align: center;
-  background-color: indigo;
-  color: white;
-  padding: 1rem;
-}
-
-header p {
-  font-size: 2rem;
-}
-
-nav a {
-  color: white;
-  margin-left: 1rem;
-  text-decoration: none;
-}
-
-#menu-toggle {
-  display: none;
-}
-
-.navigation {
-  display: flex !important;
-  flex-direction: row;
-  gap: 1rem;
-  margin-top: 0;
+/* Intermediate screen sizes (tablets, etc.) */
+@media (min-width: 600px) and (max-width: 900px) {
+  .album {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+  }
 }
