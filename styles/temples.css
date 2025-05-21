@@ -35,7 +35,7 @@ nav a:hover {
   text-shadow: 0 0 15px rgb(179, 255, 0), 0 0 20px rgb(238, 255, 0);
 }
 
-h1, figcaption {
+h1, h2, figcaption {
     display: grid;
     text-align: center;
 }
