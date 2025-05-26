@@ -9,9 +9,10 @@ footer {
 	margin: 0 auto;
 }
 
-marquee {
+.banner {
 	padding: 1rem;
 	background-color: #eee;
+    text-align: center;
 }
 
 h1 {
@@ -31,9 +32,14 @@ article p {
 	text-align: justify;
 }
 
+.content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
 .callout {
-	color: #777;
-	background-color: #702963;
+	color: #ededed;
+	background-color: #0b327f;
     padding: 1rem;
 }
 
@@ -41,5 +47,5 @@ footer {
 	margin-top: 1rem;
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
 	font-size: smaller;
-	text-align: right;
+	text-align: left;
 }
