@@ -6,8 +6,10 @@
     <meta name="description" content="Country or place where I live, have visited, or wish to visit. In this case I'm choosing Rio de Janeiro, Brazil. A place where I lived for 2 years."> 
     <title>W03 Assignment - Country Page - Rio de Janeiro, Brazil</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/place-large.css">
-    <link rel="stylesheet" href="styles/place-small.css">
+    <!-- Default for large screens -->
+    <link rel="stylesheet" href="styles/place-large.css" media="(min-width: 768px)">
+    <!-- Default for smaller screens -->
+    <link rel="stylesheet" href="styles/place-small.css" media="(max-width: 767px)">
     <!-- Java Script -->
      <script src="scripts/place.js" defer></script>
 </head>
@@ -20,31 +22,30 @@
     <main>
         <div class="hero">
             <picture>
-                <source srcset="images/cristo-large.webp" media="(min-width: 1000px)">
-                <source srcset="images/cristo-small.webp" media="(min-width: 500px)">
+                <source srcset="images/cristo-large.webp" media="(min-width: 768px)">
+                <source srcset="images/cristo-small.webp" media="(min-width: 767px)">
                 <img src="images/cristo-small.webp" alt="Cristo Redentor, Brazil">
-            </picture>
-        </div> 
+            </picture> 
         
-         <section class="data">
-            <h2>Data</h2>
-            <p>Area: 1,221 km2 (486.5 sq mi)</p>
-            <p>Population: 13,923,000</p>
-            <p>Languages: Portuguese</p>
-            <p>Currency: Real (Reais)</p>
-            <p>Time Zone: UTC-3 (BRT)</p>
-            <p>Calling Code: +55 (21)</p>
-            <p>Internet TLD: .rio</p>
-        </section>
+            <section class="data">
+                <h2>Data</h2>
+                <p>Area: 1,221 km2 (486.5 sq mi)</p>
+                <p>Population: 13,923,000</p>
+                <p>Languages: Portuguese</p>
+                <p>Currency: Real (Reais)</p>
+                <p>Time Zone: UTC-3 (BRT)</p>
+                <p>Calling Code: +55 (21)</p>
+                <p>Internet TLD: .rio</p>
+            </section>
 
-        <section class="weather">
-            <h2>Weather</h2>
-            <p>Temperature:</p>
-            <p>Conditions:</p>
-            <p>Wind:</p>
-            <p>Wind Chill:</p>
-        </section>
-        
+            <section class="weather">
+                <h2>Weather</h2>
+                <p>Temperature:</p>
+                <p>Conditions:</p>
+                <p>Wind:</p>
+                <p>Wind Chill:</p>
+            </section>
+        </div>
     </main>
 
     <footer>
