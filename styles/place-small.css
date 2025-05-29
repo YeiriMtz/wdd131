@@ -32,3 +32,12 @@ main img {
     margin: 1%;
     width: ;
 }
+
+.data h2, .weather h2 {
+    margin-bottom: 0.5rem;
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 5px;
+    text-align: center;
+}
