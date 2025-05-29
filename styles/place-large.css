@@ -107,13 +107,26 @@ header, footer{
   vertical-align: middle;
 }
 
+/* ===== Media query for extra large screens ===== */
+
 @media (min-width: 1200px) {
   .hero {
-    height: 800px; /* taller hero image */
+    height: 800px; /* taller hero */
   }
 
   .data, .weather {
-    max-width: 350px; /* slightly wider boxes */
+    max-width: 350px;
+    padding: 1.5rem 2rem;
+  }
+
+  .data {
+    top: 15%;
+    left: 5%;
+  }
+
+  .weather {
+    bottom: 7%;
+    right: 5%;
   }
 
   h1 {
@@ -123,5 +136,8 @@ header, footer{
   .data h2, .weather h2 {
     font-size: 2rem;
   }
-}
 
+  .icon {
+    display: none; /* keep hidden on large */
+  }
+}
