@@ -106,3 +106,22 @@ header, footer{
   margin-left: 0.5rem;
   vertical-align: middle;
 }
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 800px; /* taller hero image */
+  }
+
+  .data, .weather {
+    max-width: 350px; /* slightly wider boxes */
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .data h2, .weather h2 {
+    font-size: 2rem;
+  }
+}
+

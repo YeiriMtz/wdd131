@@ -50,3 +50,41 @@ main img {
   width: 100px;
   height: 100px;
 }
+
+/* MEDIA QUERY */
+/* Very small phones */
+@media (max-width: 400px) {
+  header, footer {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .data, .weather {
+    padding: 0.75rem 1rem;
+    margin: 0.5%;
+  }
+
+  .data h2, .weather h2 {
+    font-size: 1.25rem;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Small to medium phones */
+@media (min-width: 401px) and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 90px;
+    height: 90px;
+  }
+}
