@@ -5,6 +5,10 @@
     --accent2-color: #dcc48f;
 }
 
+h1 {
+    font-family: "Poetsen One", sans-serif;
+}
+
 header, footer {
   text-align: center;
   background-color: var(--primary-color);
