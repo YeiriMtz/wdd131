@@ -75,9 +75,26 @@ header, footer{
   font-size: 1.5rem; 
 }
 
-.weather h2 .icon {
+.weather h2::after {
+  content: url("../images/1530392_weather_sun_sunny_temperature_icon.svg");
+  display: inline-block;
   width: 2rem;
   height: 2rem;
-  flex-shrink: 0;        
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+/* hides the weather icon on larger screens, the image is being replace with a pseudo-element instead */
+.weather h2 .icon { 
+  display: none;
+}
+
+/* pseudo-element */
+.weather h2::after {
+  content: url("../images/1530392_weather_sun_sunny_temperature_icon.svg");
   display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
