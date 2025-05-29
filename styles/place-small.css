@@ -26,4 +26,84 @@ main img {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 0
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin: 1%;
+}
+
+.data h2, .weather h2 {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;        
+  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+
+.weather h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: 0.5rem;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+}
+
+/* ===== Media queries for small screens ===== */
+
+/* Very small phones */
+@media (max-width: 400px) {
+  header, footer {
+    padding: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: auto; /* let image determine height */
+  }
+
+  main img {
+    width: 100%;
+    height: auto;
+  }
+
+  .data, .weather {
+    position: static; /* no absolute */
+    max-width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: none;
+  }
+
+  .data h2, .weather h2 {
+    font-size: 1.25rem;
+  }
+
+  .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Small to medium phones */
+@media (min-width: 401px) and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .data, .weather {
+    padding: 1rem 1.5rem;
+    margin: 1% 0;
+  }
+}
