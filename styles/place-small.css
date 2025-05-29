@@ -107,3 +107,7 @@ main img {
     margin: 1% 0;
   }
 }
+
+.data, .weather {
+  text-align: center;
+}
