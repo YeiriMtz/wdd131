@@ -91,3 +91,41 @@ nav #menuToggle {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+.temple-card {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.temple-card:hover {
+  transform: scale(1.02);
+}
+
+.temple-card h3 {
+  margin-top: 0;
+  color: #184f80;
+}
+
+.temple-card p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.temple-card .label {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 700px) {
+  .album {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .album {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} 
