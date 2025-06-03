@@ -13,7 +13,7 @@ menuToggle.addEventListener("click", () => {
   menuItems.classList.toggle("show");
 });
 
-// Temples array
+// Temples data
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -97,28 +97,33 @@ const temples = [
   },  
 ];
 
+// Clear existing temple cards from the album container
 function clearTempleCards() {
-  document.querySelector(".album").innerHTML = "";
+  const album = document.querySelector(".album");
+  album.innerHTML = "";
 }
 
+// Create and append a single temple card to the album container
 function renderTempleCard(temple) {
   let card = document.createElement("section");
   card.classList.add("temple-card");
 
   let name = document.createElement("h3");
-  let location = document.createElement("p");
-  let dedication = document.createElement("p");
-  let area = document.createElement("p");
-  let img = document.createElement("img");
-
   name.textContent = temple.templeName;
+
+  let location = document.createElement("p");
   location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+
+  let dedication = document.createElement("p");
   dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+
+  let area = document.createElement("p");
   area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
 
+  let img = document.createElement("img");
   img.setAttribute("src", temple.imageUrl);
   img.setAttribute("alt", `${temple.templeName} Temple`);
-  img.setAttribute("loading", "lazy");
+  img.setAttribute("loading", "lazy"); // Native lazy loading
 
   card.appendChild(name);
   card.appendChild(location);
@@ -129,8 +134,11 @@ function renderTempleCard(temple) {
   document.querySelector(".album").appendChild(card);
 }
 
+// Filter temples and update the page heading accordingly
 function filterTemples(criteria) {
   clearTempleCards();
+
+  const mainHeading = document.querySelector("main h1");
   let filtered = [];
 
   switch (criteria) {
@@ -139,33 +147,43 @@ function filterTemples(criteria) {
         const year = parseInt(t.dedicated.split(",")[0]);
         return year < 1900;
       });
+      mainHeading.textContent = "Old Temples (Before 1900)";
       break;
     case "new":
       filtered = temples.filter(t => {
         const year = parseInt(t.dedicated.split(",")[0]);
         return year > 2000;
       });
+      mainHeading.textContent = "New Temples (After 2000)";
       break;
     case "large":
       filtered = temples.filter(t => t.area > 90000);
+      mainHeading.textContent = "Large Temples (Over 90,000 sq ft)";
       break;
     case "small":
       filtered = temples.filter(t => t.area < 10000);
+      mainHeading.textContent = "Small Temples (Under 10,000 sq ft)";
       break;
     case "home":
     default:
       filtered = temples;
+      mainHeading.textContent = "Home";
   }
 
-  filtered.forEach(t => renderTempleCard(t));
+  filtered.forEach(renderTempleCard);
 }
 
-document.querySelectorAll(".menu-items a").forEach(link => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault(); 
-    const filter = e.target.getAttribute("data-filter");
+// Initial render of all temples on page load
+filterTemples("home");
+
+// Add event listeners to menu links
+const menuLinks = document.querySelectorAll("#menuItems a");
+menuLinks.forEach(link => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const filter = link.textContent.toLowerCase();
     filterTemples(filter);
+    menuItems.classList.remove("show"); // Hide menu on selection (mobile)
   });
 });
 
-filterTemples("home");
