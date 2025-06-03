@@ -13,7 +13,7 @@ menuToggle.addEventListener("click", () => {
   menuItems.classList.toggle("show");
 });
 
-// Week 04
+// Temples array
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -97,32 +97,75 @@ const temples = [
   },  
 ];
 
-function createTempleCard() {
-  temples.forEach(temple => {
-    let card = document.createElement("section");
-    let name = document.createElement("h3");
-    let location = document.createElement("p");
-    let dedication = document.createElement("p");
-    let area = document.createElement("p");
-    let img = document.createElement("img");
-
-    name.textContent = temple.templeName;
-    location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
-    dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
-    area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
-
-    img.setAttribute("src", temple.imageUrl);
-    img.setAttribute("alt", `${temple.templeName} Temple`);
-    img.setAttribute("loading", "lazy");
-
-    card.appendChild(name);
-    card.appendChild(location);
-    card.appendChild(dedication);
-    card.appendChild(area);
-    card.appendChild(img);
-
-    document.querySelector(".album").appendChild(card);
-  });
+function clearTempleCards() {
+  document.querySelector(".album").innerHTML = "";
 }
 
-createTempleCard();
+function renderTempleCard(temple) {
+  let card = document.createElement("section");
+  card.classList.add("temple-card");
+
+  let name = document.createElement("h3");
+  let location = document.createElement("p");
+  let dedication = document.createElement("p");
+  let area = document.createElement("p");
+  let img = document.createElement("img");
+
+  name.textContent = temple.templeName;
+  location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+  dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+  area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
+
+  img.setAttribute("src", temple.imageUrl);
+  img.setAttribute("alt", `${temple.templeName} Temple`);
+  img.setAttribute("loading", "lazy");
+
+  card.appendChild(name);
+  card.appendChild(location);
+  card.appendChild(dedication);
+  card.appendChild(area);
+  card.appendChild(img);
+
+  document.querySelector(".album").appendChild(card);
+}
+
+function filterTemples(criteria) {
+  clearTempleCards();
+  let filtered = [];
+
+  switch (criteria) {
+    case "old":
+      filtered = temples.filter(t => {
+        const year = parseInt(t.dedicated.split(",")[0]);
+        return year < 1900;
+      });
+      break;
+    case "new":
+      filtered = temples.filter(t => {
+        const year = parseInt(t.dedicated.split(",")[0]);
+        return year > 2000;
+      });
+      break;
+    case "large":
+      filtered = temples.filter(t => t.area > 90000);
+      break;
+    case "small":
+      filtered = temples.filter(t => t.area < 10000);
+      break;
+    case "home":
+    default:
+      filtered = temples;
+  }
+
+  filtered.forEach(t => renderTempleCard(t));
+}
+
+document.querySelectorAll(".menu-items a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); 
+    const filter = e.target.getAttribute("data-filter");
+    filterTemples(filter);
+  });
+});
+
+filterTemples("home");
