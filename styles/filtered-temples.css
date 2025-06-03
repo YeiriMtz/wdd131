@@ -1,0 +1,93 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(24, 81, 128);
+  color: white;
+  padding: 1rem;
+}
+
+footer{
+  display: grid; 
+  text-align: center;
+  background-color: rgb(24, 81, 128);
+  color: white;
+  padding: 1rem;
+}
+
+header p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-family: "Poetsen One", sans-serif;
+}
+
+nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-shadow: 0 0 15px rgb(179, 255, 0), 0 0 20px rgb(238, 255, 0);
+}
+
+h1, h2, figcaption {
+    display: grid;
+    text-align: center;
+}
+
+img {
+    height: 300px;
+}
+
+nav .menu-items {
+  display: none;
+  flex-direction: column;
+  background-color: rgb(24, 81, 128);
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+nav .menu-items a {
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav .menu-items a:last-child {
+  border-bottom: none;
+}
+
+nav #menuToggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-items.show {
+  display: flex;
+}
+
+/* Album grid: 1 column on mobile */
+.album {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.album img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
