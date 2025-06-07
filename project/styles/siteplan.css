@@ -1,0 +1,28 @@
+.navigation a {
+    text-decoration: none;
+    color: white;
+}
+header img {
+    height: 80px;
+}
+
+header nav{
+    background-color: #343433;           
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    border-radius: 10px; 
+
+    display: grid;
+    grid-template-columns:  20% 20% 20% 20% 20%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    font-size: 150%;
+}
+
+a:hover {
+    text-shadow: 0 0 10px rgb(179, 255, 0), 0 0 20px rgb(238, 255, 0);
+}
