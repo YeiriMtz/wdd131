@@ -2,12 +2,21 @@
     text-decoration: none;
     color: white;
 }
+body {
+    background-color: #343433;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Mansalva", sans-serif;
+}
+
 header img {
-    height: 80px;
+    height: 90px;
 }
 
 header nav{
-    background-color: #343433;           
     display: flex;
     justify-content: space-between;
     text-decoration: none;
@@ -21,8 +30,18 @@ header nav{
     align-items: center;
 
     font-size: 150%;
+    width: auto;
+    height: 120px;
+    margin: 0;
+    font-family: "Shadows Into Light", cursive;
 }
 
 a:hover {
-    text-shadow: 0 0 10px rgb(179, 255, 0), 0 0 20px rgb(238, 255, 0);
+    text-shadow: 0 0 10px #46c0e2, 0 0 20px #0599c2;
+}
+
+picture img {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
