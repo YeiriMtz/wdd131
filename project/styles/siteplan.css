@@ -1,55 +1,70 @@
-body {
-    background-color: #343433;
-    margin: 0;
-    padding: 0;
+/* Reset and base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #343433;
 }
 
-/* HEADER & NAVIGATION */
+/* Header and navigation */
 header {
-    position: absolute; /* Makes it float over image */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 10;
-    background-color: rgba(0, 0, 0, 0.321); /* Optional overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  height: 200px; /* Adjust height as needed */
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
-header img {
-    height: 90px;
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 150%;
+  font-family: "Shadows Into Light", cursive;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 150%;
-    font-family: "Shadows Into Light", cursive;
-    padding: 0 20px;
-    height: 100%;
+.navigation img {
+  height: 90px;
 }
 
 .navigation a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
+  text-decoration: none;
+  color: white;
+  padding: 10px;
 }
 
-a:hover {
-    text-shadow: 0 0 10px #46c0e2, 0 0 20px #0599c2;
+.navigation a:hover {
+  text-shadow: 0 0 10px #46c0e2, 0 0 20px #0599c2;
 }
 
-/* HERO IMAGE (Background) */
+/* Site title inside header */
+.site-title {
+  color: white;
+  text-align: center;
+  font-family: "Mansalva", sans-serif;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+}
+
+/* Full background image styles */
+main, picture, picture img {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
 picture img {
-    width: 100%;
-    height: 100vh; /* Fill full viewport height */
-    object-fit: cover;
-    display: block;
-}
-
-/* HEADING STYLING */
-h1 {
-    color: white;
-    text-align: center;
-    font-family: "Mansalva", sans-serif;
+  height: 100vh;
+  object-fit: cover;
 }
