@@ -1,47 +1,55 @@
-.navigation a {
-    text-decoration: none;
-    color: white;
-}
 body {
     background-color: #343433;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: white;
-    text-align: center;
-    font-family: "Mansalva", sans-serif;
+/* HEADER & NAVIGATION */
+header {
+    position: absolute; /* Makes it float over image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.321); /* Optional overlay */
 }
 
 header img {
     height: 90px;
 }
 
-header nav{
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    border-radius: 10px; 
-
-    display: grid;
-    grid-template-columns:  20% 20% 20% 20% 20%;
-
+header nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     font-size: 150%;
-    width: auto;
-    height: 120px;
-    margin: 0;
     font-family: "Shadows Into Light", cursive;
+    padding: 0 20px;
+    height: 100%;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
 }
 
 a:hover {
     text-shadow: 0 0 10px #46c0e2, 0 0 20px #0599c2;
 }
 
+/* HERO IMAGE (Background) */
 picture img {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 100vh; /* Fill full viewport height */
+    object-fit: cover;
+    display: block;
+}
+
+/* HEADING STYLING */
+h1 {
+    color: white;
+    text-align: center;
+    font-family: "Mansalva", sans-serif;
 }
