@@ -10,8 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <!-- JAVA SCRIPT -->
+  <script src="scripts/siteplan.js" defer></script>
 </head>
-<body>
+<!-- <body>
   <header>
     <nav class="navigation">
       <img src="images/LOGO2.png" alt="Yeiri's Logo" />
@@ -35,6 +37,79 @@
             <p>The site serves as a professional portfolio and information hub for Yeiri’s Photography. It showcases a curated selection of photography work, including portraits, events, landscapes, and lifestyle shoots. Visitors can explore the portfolio, learn more about Yeiri’s style and services, read testimonials, and easily get in touch or book a session through the contact form. The site aims to attract new clients, highlight creative expertise, and provide essential booking and pricing information.</p>
         </article>
     </section>
+  </main> -->
+<body>
+    <div class="background">
+        <header>
+            <nav class="navigation">
+                <img src="images/LOGO2.png" alt="Yeiri’s Logo">
+                <a href="siteplan.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>   
+            </nav>
+        </header>
+
+        <main>
+            <!-- TITLE -->
+            <section class="hero">
+                <h1>Yeiri’s Photography</h1>
+            </section>
+            <!-- BIO INFO -->
+            <section class="adventure-section">
+                <div class="adventure-gallery">
+                    <figure>
+                        <img src="images/rivers-home.jpg" alt="1">
+                        <figcaption>Rivers</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/camping-home.jpg" alt="2">
+                        <figcaption>Camping</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/rapids-home.jpg" alt="3">
+                        <figcaption>Rapids</figcaption>
+                    </figure>
+                </div>
+            </section>
+            <!-- JOIN US SECTION -->
+            <form>
+                <fieldset>
+                    <legend class="home-form-legend">Join Us!</legend>
+                    <!-- name -->
+                        <label for="first-name">Name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Your Name Here">
+                    <!-- email address -->
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="example@email.com">
+                </fieldset>
+                <a href="trips.html" class="newsletter-button">Book Now</a>
+            </form>
+
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <!-- paragraph 1 -->
+            <p>© | <span id="currentyear"></span> | Yeiri's Photography </p>
+            <!-- paragraph 2 -->
+            <p>Last update: <span id="lastModified"></span></p>
+
+            <nav class="socialinks">
+                <a href="https://www.facebook.com/">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.tiktok.com/@yeirimartinez">
+                    <img src="images/tiktok.png" alt="TikTok">
+                </a>
+                <a href="https://www.instagram.com/">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+            </nav>
+        </div>  
+    </footer>
+</body>
+</html>
 
 
 
@@ -45,7 +120,21 @@
 
 
 
-  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>
