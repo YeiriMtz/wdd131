@@ -4,10 +4,28 @@
     --accent1-color: #9b9597;
     --accent2-color: #06657f;
 }
-body {
+
+html, body {
     background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Make .background a column-flex container so footer can auto-push */
+.background {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    background-image: url(../images/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* HEADER / NAVIGATION */
 .navigation {
   display: flex;
   align-items: center;
@@ -17,11 +35,7 @@ body {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-
-.navigation img {
-  height: 85px;
-}
-
+.navigation img { height: 85px; }
 .navigation h1 {
   flex-grow: 1;
   text-align: center;
@@ -31,121 +45,89 @@ body {
   color: white;
   text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
-
 .nav-links {
   display: flex;
   gap: 3rem;
 }
-
 .nav-links a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
-
 .navigation a:hover {
   text-shadow: 0 0 10px var(--accent2-color), 0 0 20px var(--primary-color);
 }
 
-.background {
-    background-image: url(../images/background.webp);
-    min-width: 0rem;
-    min-height: 50rem;
-    background-size: cover;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-  }
-
-/* BOOK NOW BUTTON - About Page */      
-.newsletter-button {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin: 20px auto;
-    padding: 8px 12px;
-    background-color: var(--accent2-color);
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center; 
-}
-
-/* GET IN TOUCH BUTTON - Contact Page */
-.get-in-touch-button {
-    display: flex;
-    justify-content: center;
-    width: 20%;
-    margin: 20px auto;
-    padding: 8px;
-    background-color: var(--accent2-color);
-    color: white;
-    font-size: 1em;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    font-size: larger;
-}
-
+/* MAIN CONTAINER: equal-height sections */
 .main-container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: auto;
-    width: auto;
-    gap: 2%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: stretch;  /* forces children to equal height */
+    gap: 2rem;
+    padding: 1rem;
 }
 
+/* BIO and CONTACT SECTION BASE */
+.bio-section,
+.get-in-touch {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+}
+
+/* BIO SECTION */
 .bio-section {
     font-size: 20px;
     margin: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}   
+}
 
-.bio-section article { 
+.bio-section article {
+    flex: 1;                  /* fill available height */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     font-size: x-large;
     color: var(--secondary-color);
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 5px;
-    width: 100%;
 }
 
 .bio-section article img {
     width: 50%;
-    height: 50%;
-    
-    float: right;
-    margin-left: 15px;
+    height: auto;
     border-radius: 5px;
+    margin-left: 15px;
+    float: none;
 }
 
 .bio-section article p {
-    color: var(--secondary-color);
+    flex: 1;
+    margin: 0;
     text-align: left;
+    color: var(--secondary-color);
 }
 
+/* GET IN TOUCH SECTION */
 .get-in-touch {
     margin: 15px;
-    width: 100%;
 }
 
-form {
+.get-in-touch form {
+    flex: 1;                  /* fill available height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     color: var(--secondary-color);
     font-family: sans-serif;
     font-size: 20px;
-    width: 86%;
-    height: 90%;    
+    width: 100%;    
 }
 
 fieldset {
@@ -167,8 +149,8 @@ label {
     font-weight: 500;
 }
 
-  input,
-  textarea {
+input,
+textarea {
     width: 100%;
     max-width: 100%;
     padding: 12px;
@@ -185,43 +167,58 @@ textarea::placeholder {
     color: #ccc;
 }
 
-button:hover, .newsletter-button:hover, .get-in-touch-button:hover {
+/* BUTTON STYLES */
+.newsletter-button,
+.get-in-touch-button {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 20px auto;
+    padding: 8px;
+    background-color: var(--accent2-color);
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+button:hover,
+.newsletter-button:hover,
+.get-in-touch-button:hover {
     background-color: #45a049;
 }
 
+/* FOOTER */
 footer {
-  width: auto;
-  margin: 20px auto;
-  padding: 10px;
+  margin-top: auto;      /* pushes footer to bottom */
+  padding: 5px 10px;
   background-color: #33343476;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  
 }
-.socialinks a{
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--secondary-color);
+    padding: 5px 0;
+}
+.socialinks a {
     text-decoration: none;
 }
-
 .socialinks img {
     height: 50px;
     width: auto;
 }
-
-.footer-container{
-    display: grid;
-    grid-template-columns: 33.3% 33.3% 33.3%;
-    
-    display: flex;
-    justify-content: space-around;
-
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
 .footer-container a {
     color: var(--secondary-color);
     text-decoration: none;
 }
+  
+
 
 /* .history-section {
   font-size: 20px;
