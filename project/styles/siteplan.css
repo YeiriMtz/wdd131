@@ -1,12 +1,12 @@
 :root { 
     --primary-color: #0599c2;
     --secondary-color: rgba(255, 255, 255, 0.789);
-    --accent1-color: #9b9597;
+    --accent1-color: #8ec4dc;
     --accent2-color: #06657f;
 }
 
 html, body {
-    background-color: var(--primary-color);
+    background-color: var(--accent1-color);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -217,7 +217,7 @@ footer {
     color: var(--secondary-color);
     text-decoration: none;
 }
-  
+
 
 
 /* .history-section {

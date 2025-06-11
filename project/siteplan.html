@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="Daniel Yeiri Martinez Quintana" />
-  <meta name="description" content="Capturing life’s moments—big and small—with creativity, precision, and heart. From portraits to landscapes, every photo tells a story. Let’s tell yours." />
-  <title>Yeiri's Photography</title>
+  <title>Site Plan | Yeiri’s Photography</title>
   <link rel="stylesheet" href="styles/siteplan.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,52 +12,61 @@
   <!-- JAVA SCRIPT -->
   <script src="scripts/siteplan.js" defer></script>
 </head>
+<body>
+  <header>
+    <nav class="navigation">
+      <img src="images/LOGO2.png" alt="Yeiri’s Logo">
+      <h1>Yeiri’s Photography 📷</h1>
+      <div class="nav-links">
+        <a href="siteplan.html">Site Plan</a>
+        <a href="home.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<body>  
-    <div class="background">
-        <header>
-        <nav class="navigation">
-            <img src="images/LOGO2.png" alt="Yeiri’s Logo">
-            <h1>Yeiri’s Photography 📷</h1>
-            <div class="nav-links">
-            <a href="siteplan.html">About</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
-            </div>
-        </nav>
-        </header>
+  <main class="siteplan-content">
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Name:</strong> Yeiri’s Photography</p>
+      <p><strong>Description:</strong> This name reflects the brand of the photographer, Yeiri, and emphasizes the personal, artistic, and professional approach to photography that she offers. It’s clear, memorable, and directly communicates the service provided.</p>
+    </section>
 
-        <main>
-            <div class="main-container">
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The purpose of this site is to provide a digital portfolio for Yeiri's photography services. It includes a biography, a sample gallery of past work, and an easy way for potential clients to get in touch or book a session.</p>
+    </section>
 
-            <!-- BIO INFO -->
-            <section class="bio-section">
-                <article>
-                    <p>I'm a passionate photographer with a love for capturing genuine moments and telling visual stories. Whether it's portraits, landscapes, or everyday details, my goal is to create images that feel authentic and timeless. Photography isn't just what I do—it's how I see the world.</p>
-                    <img src="images/LOGO1.png" alt="Yeiri's Profile">
-                </article>
-            </section>
+    <section>
+      <h2>Visitor Scenarios</h2>
+      <ul>
+        <li>How can I book a photography session with Yeiri?</li>
+        <li>Where can I see examples of Yeiri's past photography work?</li>
+        <li>How do I contact Yeiri with questions or custom session requests?</li>
+      </ul>
+    </section>
 
-            <!-- GET IN TOUCH -->
-             <section class="get-in-touch">
-                <form>
-                <fieldset>
-                    <legend class="home-form-legend">GET IN TOUCH!</legend>
-                    <!-- name -->
-                        <label for="first-name">Name</label>
-                        <input type="text" name="first-name" id="first-name" placeholder="Your Name Here">
-                    <!-- email address -->
-                        <label for="email">Email</label>
-                        <input type="text" name="email" id="email" placeholder="example@email.com">
-                </fieldset>
-                <a href="contact.html" class="newsletter-button">Book Now</a>
-            </form>
-            </section>
+    <section>
+      <h2>Color Schema</h2>
+      <ul>
+        <li><strong>Primary Color:</strong> #0599c2 — Used for the page background and main color theme.</li>
+        <li><strong>Secondary Color:</strong> rgba(255, 255, 255, 0.789) — Used for text and contrast areas.</li>
+        <li><strong>Accent 1:</strong> #9b9597 — Used optionally for background shades or subtle elements.</li>
+        <li><strong>Accent 2:</strong> #06657f — Used for buttons and hover states.</li>
+      </ul>
+    </section>
 
-            </div>
-        </main>
-    
-    <footer>
+    <section>
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Shadows Into Light</strong> (Google Font) — Used for main headings (e.g., site title).</li>
+        <li><strong>Sans-serif</strong> — Used for body text, form inputs, and descriptions for clean readability.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
         <div class="footer-container">
             <!-- paragraph 1 -->
             <p>© | <span id="currentyear"></span> | Yeiri's Photography </p>
@@ -78,6 +86,5 @@
             </nav>
         </div>  
     </footer>
-    </div>
 </body>
 </html>
