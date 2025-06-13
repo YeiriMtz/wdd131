@@ -14,7 +14,6 @@ html, body {
     flex-direction: column;
 }
 
-/* Make .background a column-flex container so footer can auto-push */
 .background {
     flex: 1; 
     display: flex;
@@ -66,7 +65,7 @@ html, body {
 .main-container {
     display: flex;
     justify-content: center;
-    align-items: stretch;  /* forces children to equal height */
+    align-items: stretch; 
     gap: 2rem;
     padding: 1rem;
 }
@@ -77,7 +76,7 @@ html, body {
     flex: 1;
     max-width: 600px;
     display: flex;
-    flex-direction: column; /* stack children vertically */
+    flex-direction: column; 
 }
 
 /* BIO SECTION */
@@ -89,7 +88,7 @@ html, body {
 }
 
 .bio-section article {
-    flex: 1;                  /* fill available height */
+    flex: 1; 
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -121,7 +120,7 @@ html, body {
 }
 
 .get-in-touch form {
-    flex: 1;                  /* fill available height */
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -197,7 +196,7 @@ button:hover,
 
 /* FOOTER */
 footer {
-  margin-top: auto;      /* pushes footer to bottom */
+  margin-top: auto;
   padding: 5px 10px;
   background-color: #33343476;
   border-radius: 5px;

@@ -36,9 +36,9 @@
 }
 
 #hamburger {
-  display: block !important;  /* Forces it to show */
+  display: block !important;  
 }
-    
+
 .nav-links {
   display: none;
   flex-direction: column;
