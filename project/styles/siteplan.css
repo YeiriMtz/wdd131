@@ -282,7 +282,7 @@ footer {
 }
 
 .wireframe-container img {
-  max-width: 100%;
+  max-width:50%;
   height: auto;
   border: 2px solid var(--accent1-color);
   border-radius: 5px;
