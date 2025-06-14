@@ -13,14 +13,13 @@
     <script src="scripts/form.js" defer></script>
 </head>
 <body>
-
-  <h1>Order a Product</h1>
+  <h1>Product Review</h1>
   <form method="get" action="review.html">
     <!-- Product Name -->
     <label for="product">Product Name:</label>
 
     <select id="product" name="product" required>
-      <option value="" disabled selected>Select a Product ...</option>
+      <option value="" disabled selected>Choose a Product ...</option>
     </select>
     <br><br>
 
@@ -30,23 +29,23 @@
 
       <label for="rating1">
         <input type="radio" id="rating1" name="rating" value="1" required/>
-        1
+        ★
       </label>
       <label for="rating2">
         <input type="radio" id="rating2" name="rating" value="2"/>
-        2
+        ★★
       </label>
       <label for="rating3">
         <input type="radio" id="rating3" name="rating" value="3"/>
-        3
+        ★★★
       </label>
       <label for="rating4">
         <input type="radio" id="rating4" name="rating" value="4"/>
-        4
+        ★★★★
       </label>
       <label for="rating5">
         <input type="radio" id="rating5" name="rating" value="5"/>
-        5
+        ★★★★★
       </label>
     </fieldset>
     <br>
@@ -58,7 +57,7 @@
 
     <!-- Useful Features -->
     <fieldset>
-      <legend>Useful Features (check all that apply):</legend>
+      <legend>Which features did you find useful in the product? (check all that apply)</legend>
 
       <label for="feature1">
         <input type="checkbox" id="feature1" name="features" value="Easy Setup"/>
@@ -88,12 +87,12 @@
     <br>
 
     <!-- Written Review -->
-    <label for="review">Written Review:</label><br>
+    <label for="review">Written Review (Optional)</label><br>
     <textarea id="review" name="review" rows="5" cols="40" placeholder="Write your review here..."></textarea>
     <br><br>
 
     <!-- User Name -->
-    <label for="username">Your Name:</label>
+    <label for="username">Your Name (Optional)</label>
     <input type="text" id="username" name="username"/>
     <br><br>
 
