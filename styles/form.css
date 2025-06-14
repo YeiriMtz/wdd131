@@ -1,7 +1,7 @@
 :root {
   --primary-color: #219fc5;
   --accent-color: #1ca93a;
-  --background-color: #78a6be;
+  --background-color: #5a9ec2;
   --text-color: #333;
   --border-radius: 5px;
 }
@@ -83,6 +83,11 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: var(--accent-color);
+}
+
+/* Review page */
+.review-info-section {
+    text-align: center;
 }
 
 /* Footer */
