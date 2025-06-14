@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #0599c2;
+  --accent-color: #034663;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --border-radius: 5px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/* Form styling */
+form {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* Form elements */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+}
+
+/* Radio & Checkbox labels stay inline */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  margin: 2rem auto 0;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: #666;
+}
