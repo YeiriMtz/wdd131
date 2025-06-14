@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #0599c2;
-  --accent-color: #034663;
-  --background-color: #f4f4f4;
+  --primary-color: #219fc5;
+  --accent-color: #1ca93a;
+  --background-color: #78a6be;
   --text-color: #333;
   --border-radius: 5px;
 }
@@ -17,13 +17,13 @@ body {
 /* Header */
 h1 {
   text-align: center;
-  color: var(--primary-color);
+  color: rgba(255, 255, 255, 0.79);
   margin-bottom: 1rem;
 }
 
 /* Form styling */
 form {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.79);
   padding: 1rem;
   border-radius: var(--border-radius);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -90,5 +90,5 @@ footer {
   text-align: center;
   margin-top: 3rem;
   font-size: 0.875rem;
-  color: #666;
+  color: rgba(255, 255, 255, 0.79);
 }
