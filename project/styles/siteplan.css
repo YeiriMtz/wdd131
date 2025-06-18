@@ -1,6 +1,6 @@
 :root { 
     --primary-color: #124454;
-    --secondary-color: rgba(255, 255, 255, 0.789);
+    --secondary-color: white;
     --accent1-color: #8ec4dc;
     --accent2-color: #06657f;
 }
@@ -194,7 +194,7 @@ button:hover,
 footer {
   margin-top: auto;
   padding: 5px 10px;
-  background-color: #33343476;
+  background-color: #34333376;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
